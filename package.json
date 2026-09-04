@@ -6,10 +6,17 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:e2e": "playwright test",
+    "test:e2e:parallel": "playwright test --fully-parallel --workers=75%",
+    "test:e2e:serial": "playwright test --workers=1",
+    "test:e2e:chromium": "playwright test --project=chromium",
+    "test:e2e:smoke": "playwright test --grep @smoke",
+    "test:e2e:a11y": "playwright test --grep @a11y",
     "test:e2e:headed": "playwright test --headed",
     "test:e2e:ui": "playwright test --ui",
+    "test:e2e:debug": "playwright test --debug",
     "test:e2e:report": "playwright show-report"
   },
   "dependencies": {
@@ -18,7 +25,10 @@
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
     "@playwright/test": "^1.62.1",
+    "@types/node": "^20.19.43",
     "@vitejs/plugin-vue": "^4.3.4",
+    "axe-core": "^4.13.0",
+    "typescript": "^5.9.3",
     "vite": "^4.4.9",
     "vitest": "^0.34.6"
   }
