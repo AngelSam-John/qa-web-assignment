@@ -36,3 +36,32 @@ PS.
 
 **Good Luck!**
 
+## Running the tests
+
+### Install dependencies
+
+```bash
+npm ci
+npx playwright install --with-deps
+```
+
+### Execute locally
+
+Run all tests:
+
+```bash
+npm run test:e2e
+```
+
+Run tests in interactive UI mode:
+
+```bash
+npx playwright test --ui
+```
+
+### View the HTML report
+
+```bash
+npx playwright show-report
+```
+
